@@ -3,7 +3,7 @@ import os
 import csv
 
 load_file = os.path.join('budget_data.csv')
-write_file = os.path.join('budget_analysis.txt')
+write_file = os.path.join('budget_analysis.csv')
 
 with open(load_file) as data:
     csvreader=csv.reader(data,delimiter=',') 
@@ -31,7 +31,7 @@ with open(load_file) as data:
 
     m_increase = rev_change.index(max(rev_change)) +1
     m_decrease = rev_change.index(min(rev_change)) +1  
-    Average = {sum(rev_change)/(len(rev_change)),2}
+  
 
 output = ( 
 "Financial Analysis\n"
