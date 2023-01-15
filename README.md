@@ -11,7 +11,7 @@ It's time to put away the Excel sheet and join the big leagues. Welcome to the w
 
 Both of these challenges present a real-world situation where your newfound Python scripting skills can come in handy. These challenges aren't easy, so expect some hard work ahead!
 
-Before You Begin
+## Before You Begin
 Before starting the assignment, be sure to complete the following steps:
 
 Create a new repository for this project called python-challenge. Do not add this homework assignment to an existing repository.
