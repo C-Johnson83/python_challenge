@@ -1,7 +1,7 @@
 # python_challenge
 Module 3 Challenge
 
-# Unit 3 Homework: Python
+# Unit 3 Challenge: Python
 
 In this assignment, you'll complete two challenges in which you'll apply your new Python skills. 
 
