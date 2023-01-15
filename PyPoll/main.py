@@ -60,22 +60,16 @@ print(output2)
 
 # now we are going to write the results to a text file into the analysis directiory 
 # same as above, I had to write the outputs and candidate summary separate
-f =  open(write_path, "w")
-
-# writes the first output 
-f.write(output)
-
-# skips a line
-f.write('\n')
-
-# writes the candidiate summary and skips a line between candidates. This confused me for a while
-# I was printing all the candidates in a row. I didnt have the f.write('\n') indented
-for candidate, votes in candidate_vote_count.items():
-    f.write(candidate  + ": " + "{:.3%}".format(votes/ballots) + "   (" +  str(votes) + ")")
-    f.write('\n') 
+with open(write_path, "w") as pencil:
+    pencil.write(output)
+# writes the candidiate summary and skips a line between candidates. This confused me for a while,
+# I was printing all the candidates in a row. I didnt have the pencil.write('\n') indented so it was out of the loop
+    for candidate, votes in candidate_vote_count.items():
+        pencil.write(candidate  + ": " + "{:.3%}".format(votes/ballots) + "   (" +  str(votes) + ")")
+        pencil.write('\n')  
 
 # writes the second output      
-f.write(output2) 
+    pencil.write(output2)   
 
 
 
