@@ -2,7 +2,7 @@
 import os
 import csv
 
-# this is the file path to the CSV file and the write path for the analysis
+# this is the file path to the CSV file for reading, and the write path for the analysis text document
 file_path = os.path.join('resources','election_data.csv')
 write_path = os.path.join('analysis','election_results.txt')
 
@@ -26,7 +26,8 @@ with open(file_path) as data:
             candidate_vote_count[row[2]] = 1
         else:
              candidate_vote_count[row[2]] += 1
-# finds the candidiate with the max vote count in the candidate vote count list and finds the name using the dictionary key
+                
+# finds the candidiate with the max vote count in the candidate vote count list and finds their name and count using the dictionary key
 winner = max(candidate_vote_count, key=candidate_vote_count.get)
 
 #determines the outputs for the print and write events. I had to separate them. Explained bellow
@@ -57,8 +58,8 @@ for candidate, votes in candidate_vote_count.items():
 #prints the second output
 print(output2)
 
-# now we are going to write the results to a text file into the same directiory as the CSV file and main.py
-# same as above, I had to write the outputs and candidate summary separated
+# now we are going to write the results to a text file into the analysis directiory 
+# same as above, I had to write the outputs and candidate summary separate
 f =  open(write_path, "w")
 
 # writes the first output 
