@@ -36,7 +36,7 @@ output= (
     "Election Results\n"
    f"-------------------------\n"
    f"Total Votes:   {str(ballots)}\n"
-   f"-------------------------\n"
+   f"-------------------------"
     )
 
 #sets output 2
@@ -62,6 +62,8 @@ print(output2)
 # same as above, I had to write the outputs and candidate summary separate
 with open(write_path, "w") as pencil:
     pencil.write(output)
+    pencil.write('\n') 
+    
 # writes the candidiate summary and skips a line between candidates. This confused me for a while,
 # I was printing all the candidates in a row. I didnt have the pencil.write('\n') indented so it was out of the loop
     for candidate, votes in candidate_vote_count.items():
