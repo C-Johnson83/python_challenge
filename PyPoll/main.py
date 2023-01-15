@@ -36,7 +36,7 @@ output= (
     "Election Results\n"
    f"-------------------------\n"
    f"Total Votes:   {str(ballots)}\n"
-   f"-------------------------"
+   f"-------------------------\n"
     )
 
 #sets output 2
