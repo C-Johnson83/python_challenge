@@ -2,9 +2,10 @@
 import os
 import csv
 
-# this is the file path to the CSV file and is in the same directory as the main.py
+# this is the file path to the CSV file and and the analysis directory
 load_file = os.path.join('resources','budget_data.csv')
 write_path = os.path.join('analysis','budget_analysis.txt')
+
 # opens the file and skips the header and allows the file to be read
 with open(load_file) as data:
     csvreader=csv.reader(data,delimiter=',') 
@@ -47,5 +48,5 @@ output = (
 print(output)
 
 # writes the text file in the same directory as the main.py and the CSV file
-with open(write_path,'w') as file:
-   file.write(output)
+with open(write_path,'w') as pencil:
+   pencil.write(output)
